@@ -7,6 +7,20 @@ html {
   font-family: 'inter', sans-serif;
 }
 
+.nav_bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#nav_bar .nav_link {
+  list-style: none;
+  display: flex;
+  gap: 55px;
+  flex-wrap: wrap;
+}
+
 footer {
   height: 50px;
   border: 1px solid black;

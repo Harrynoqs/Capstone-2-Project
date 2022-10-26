@@ -1,5 +1,6 @@
 /* eslint-disable */
 import './style.css';
+import './modules/likes.js'
 
 const addToLocalStorage = (array) => {
   const stringifyArray = JSON.stringify(array);
@@ -47,9 +48,8 @@ const displayList = () => {
             </div>
             <p>${each.title}</p>
             <i class="fa-regular fa-heart" data-id = '${each.id}'></i>
-            <div class="likes_container">
-            <p>Likes</p>
-            </div>
+            <p class="like-count" id='${each.id}'>0</p><p>Likes</p>
+
             <button id="btn">comment</button>
         </div>
     
@@ -58,3 +58,7 @@ const displayList = () => {
 
 
 displayList();
+
+
+
+

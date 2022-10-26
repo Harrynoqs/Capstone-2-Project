@@ -15,6 +15,9 @@ const url = 'https://fakestoreapi.com/products';
 const getData = async () => {
   const fetchData = await fetch(url);
   const dataArray = await fetchData.json();
+
+  console.log(dataArray);
+
   const shortArray = [];
   for (let i = 0; i < 10; i++) {
     shortArray.push(dataArray[i]);
@@ -36,7 +39,6 @@ const displayList = () => {
 
   navBar.appendChild(span)
 
- 
 
   display.innerHTML = dataArray.map((each) => `
         <div class="each-container">
@@ -44,14 +46,15 @@ const displayList = () => {
                 <img src="${each.image}" alt="${each.category}">
             </div>
             <p>${each.title}</p>
-            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-heart" data-id = '${each.id}'></i>
             <div class="likes_container">
             <p>Likes</p>
             </div>
-            <button id="btn${each.id}">comment</button>
+            <button id="btn">comment</button>
         </div>
     
     `).join('');
 };
+
 
 displayList();

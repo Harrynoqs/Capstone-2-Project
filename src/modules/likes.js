@@ -21,14 +21,14 @@ const getLikes = async () => {
 
 getLikes();
 
-const postLikes = async () => {
+const postLikes = async (id) => {
   fetch(endpoint, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      item_id: 'id',
+      item_id: id,
     }),
   }).then((response) => response);
 };

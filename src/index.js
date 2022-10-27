@@ -17,8 +17,6 @@ const getData = async () => {
   const fetchData = await fetch(url);
   const dataArray = await fetchData.json();
 
-  console.log(dataArray);
-
   const shortArray = [];
   for (let i = 0; i < 10; i++) {
     shortArray.push(dataArray[i]);

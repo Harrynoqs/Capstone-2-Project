@@ -1,17 +1,10 @@
 /* eslint-disable */
 import './style.css';
 import './modules/likes.js'
+import { addToLocalStorage } from './modules/localStorage.js';
+import { displayList } from './modules/displayHome.js';
 
-const addToLocalStorage = (array) => {
-  const stringifyArray = JSON.stringify(array);
-  localStorage.setItem('dataArray', stringifyArray);
-};
 
-const getFromLocalStorage = () => {
-  const stringifyArray = localStorage.getItem('dataArray');
-  const dataArray = JSON.parse(stringifyArray);
-  return dataArray;
-};
 const url = 'https://fakestoreapi.com/products';
 const getData = async () => {
   const fetchData = await fetch(url);
@@ -22,41 +15,7 @@ const getData = async () => {
     shortArray.push(dataArray[i]);
   }
   addToLocalStorage(shortArray);
+  displayList();
 };
 
 getData();
-
-const displayList = () => {
-    const dataArray = getFromLocalStorage();
-  const display = document.getElementById('list');
-
-  const navBar = document.getElementById('products')
-
-  navBar.innerHTML = ''
-  const span = document.createElement('span')
-  span.textContent = `Products (${dataArray.length})`
-
-  navBar.appendChild(span)
-
-
-  display.innerHTML = dataArray.map((each) => `
-        <div class="each-container">
-            <div class="img-container">
-                <img src="${each.image}" alt="${each.category}">
-            </div>
-            <p>${each.title}</p>
-            <i class="fa-regular fa-heart" data-id = '${each.id}'></i>
-            <p class="like-count" id='${each.id}'>0</p><p>Likes</p>
-
-            <button id="btn">comment</button>
-        </div>
-    
-    `).join('');
-};
-
-
-displayList();
-
-
-
-

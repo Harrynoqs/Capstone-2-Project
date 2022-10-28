@@ -127,11 +127,11 @@ img {
 .like-count {
   clear: both;
   float: left;
-  margin: 18px 8px 0px 0px;
+  margin: 18px 8px 0 0;
 }
 
 .like-text {
-  margin: 0px 0px 0px 5px ;
+  margin: 0 0 0 5px;
 }
 
 .fa-heart {

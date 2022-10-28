@@ -3,6 +3,7 @@ import './style.css';
 import './modules/likes.js'
 import { addToLocalStorage } from './modules/localStorage.js';
 import { displayList } from './modules/displayHome.js';
+import { getLikes } from './modules/likes.js';
 
 
 const url = 'https://fakestoreapi.com/products';
@@ -16,6 +17,7 @@ const getData = async () => {
   }
   addToLocalStorage(shortArray);
   displayList();
+  getLikes
 };
 
 getData();

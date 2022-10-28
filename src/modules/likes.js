@@ -14,7 +14,7 @@ const showLikes = (response) => {
   });
 };
 
-const getLikes = async () => {
+export const getLikes = async () => {
   await fetch(endpoint)
     .then((response) => response.json())
     .then((response) => showLikes(response));

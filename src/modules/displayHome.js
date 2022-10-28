@@ -49,7 +49,7 @@ para2.innerText = 'Likes'
 eachCont.appendChild(para2)
 
 const deleteButton = document.createElement('button')
-            deleteButton.classList.add('comment')
+            deleteButton.classList.add('commentBtn')
             deleteButton.innerText = 'comment'
             deleteButton.setAttribute('id', `btn${each.id}`)
             

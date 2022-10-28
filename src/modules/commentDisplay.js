@@ -49,46 +49,46 @@ export const commentDisplay = (myId) => {
 
             // comment form
             const popupForm = document.createElement('form');
-  popupForm.setAttribute('class', 'popup_form');
-  popupForm.setAttribute('id', 'form');
-  const h36 = document.createElement('h3');
-  h36.setAttribute('class', 'add-comment');
-  h36.innerText = 'Add a Comment';
+            popupForm.setAttribute('class', 'popup_form');
+            popupForm.setAttribute('id', 'form');
+            const h3 = document.createElement('h3');
+            h3.setAttribute('class', 'add-comment');
+            h3.innerText = 'Add a Comment';
   
-  const username = document.createElement('input');
-  username.setAttribute('name', 'username');
+            const username = document.createElement('input');
+            username.setAttribute('name', 'username');
 
-  username.setAttribute('id', 'username');
-  username.setAttribute('minlength', '5');
-  username.setAttribute('placeholder', 'Your name');
-  username.setAttribute('required', true);
-  username.setAttribute('type', 'text');
-  
-  const insight = document.createElement('input');
-  insight.setAttribute('name', 'insight');
-  insight.setAttribute('id', 'insight');
-  insight.setAttribute('minlength', '1');
-  insight.setAttribute('placeholder', 'Your insight');
-  insight.setAttribute('required', true);
-  insight.setAttribute('type', 'text');
-  
-  const formbutton = document.createElement('button');
-  formbutton.setAttribute('type', 'submit');
-  formbutton.setAttribute('id', 'comment-button');
-  formbutton.innerText = 'Comment';
+            username.setAttribute('id', 'username');
+            username.setAttribute('minlength', '5');
+            username.setAttribute('placeholder', 'Your name');
+            username.setAttribute('required', true);
+            username.setAttribute('type', 'text');
+            
+            const insight = document.createElement('input');
+            insight.setAttribute('name', 'insight');
+            insight.setAttribute('id', 'insight');
+            insight.setAttribute('minlength', '1');
+            insight.setAttribute('placeholder', 'Your insight');
+            insight.setAttribute('required', true);
+            insight.setAttribute('type', 'text');
+            
+            const formbutton = document.createElement('button');
+            formbutton.setAttribute('type', 'submit');
+            formbutton.setAttribute('id', 'comment-button');
+            formbutton.innerText = 'Comment';
 
-  const breaker = document.createElement('br')
-  const breaker2 = document.createElement('br')
-  
-  popupForm.appendChild(h36);
-  popupForm.appendChild(username);
-  popupForm.appendChild(breaker);
-  popupForm.appendChild(insight);
-  popupForm.appendChild(breaker2);
-  popupForm.appendChild(formbutton);
+            const breaker = document.createElement('br')
+            const breaker2 = document.createElement('br')
+            
+            popupForm.appendChild(h3);
+            popupForm.appendChild(username);
+            popupForm.appendChild(breaker);
+            popupForm.appendChild(insight);
+            popupForm.appendChild(breaker2);
+            popupForm.appendChild(formbutton);
 
 
-  div.appendChild(popupForm);
+            div.appendChild(popupForm);
 
   const formsd = document.getElementById('form');
   formsd.addEventListener('submit', async (event) => {
@@ -97,7 +97,7 @@ export const commentDisplay = (myId) => {
     let name = formsd.username.value
     let comment = formsd.insight.value
 
-    await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VkL66oEPzdyEWHkyAEbV/comments', {
+    await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S8XMmRCmcLZyPwNwbfEu/comments', {
         method: 'POST',
         body: JSON.stringify({
             item_id: myId,

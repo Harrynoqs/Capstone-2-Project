@@ -1,52 +1,39 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Product-display
 
-> Description the project.
+>The JavaScript capstone project is about building our own web application based on an external API. We selected an API that provides data about a different product and then build a webapp around it.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
+- HTML
+- CSS
+- JavaScript
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
 
+## Video description
+
+[Video Link](https://livedemo.com)
+
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
+- clone this repository (click the green code button to copy link)
+- install project dependecies - `npm install`
 ## Authors
 
-👤 **Author1**
+👤**Micheal Oguntayo**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@oguntayomicheal](https://github.com/oguntayomicheal)
+- Twitter: [@OguntayoMicheal](https://twitter.com/Oguns_micky)
+- LinkedIn: [@OguntayoMicheal](https://www.linkedin.com/in/ogunsmicky/)
 
-👤 **Author2**
+👤 **Harry**
 
 - GitHub: [@Harrynoqs](https://github.com/githubhandle)
 - Twitter: [@noqsnoq1](https://twitter.com/twitterhandle)
@@ -57,19 +44,15 @@ To get a local copy up and running follow these simple example steps.
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
-
+👤 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse for the design provided
 
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._

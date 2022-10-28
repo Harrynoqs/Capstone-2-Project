@@ -1,17 +1,13 @@
 /* eslint-disable */
 import { getFromLocalStorage } from "./localStorage.js"
-
+import { loadData, close  } from "./commentFunctions.js";
 
 export const commentDisplay = (myId) => {
-    console.log(myId)
     const commentDiv = document.getElementById('comment')
-   
     const dataArray = getFromLocalStorage()
-
+    commentDiv.innerHTML = ''
     dataArray.forEach((each) => {
-                 if (each.id === myId) {
-                    commentDiv.innerHTML = ''
-
+                 if (each.id == myId) {
                     const div = document.createElement('div')
                     div.classList.add('comment-div')
                     commentDiv.appendChild(div)

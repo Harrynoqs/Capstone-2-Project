@@ -14,10 +14,10 @@ export const commentDisplay = (myId) => {
 
                     const deleteButton = document.createElement('button')
             deleteButton.classList.add('delButton')
-            deleteButton.innerHTML = `<i class="fa fa-close">`
+            deleteButton.innerHTML = `<i class="fa fa-close" id="close-popup">`
             
             deleteButton.onclick = () => {
-                console.log(close())
+                close()
             }
 
             div.appendChild(deleteButton)
@@ -57,7 +57,7 @@ export const commentDisplay = (myId) => {
   
   const username = document.createElement('input');
   username.setAttribute('name', 'username');
-//   username.setAttribute('class', 'detail_p');
+
   username.setAttribute('id', 'username');
   username.setAttribute('minlength', '5');
   username.setAttribute('placeholder', 'Your name');
@@ -66,8 +66,6 @@ export const commentDisplay = (myId) => {
   
   const insight = document.createElement('input');
   insight.setAttribute('name', 'insight');
-//   insight.setAttribute('class', 'detail_p');
-//   insight.setAttribute('value', ' ');
   insight.setAttribute('id', 'insight');
   insight.setAttribute('minlength', '1');
   insight.setAttribute('placeholder', 'Your insight');
@@ -76,7 +74,6 @@ export const commentDisplay = (myId) => {
   
   const formbutton = document.createElement('button');
   formbutton.setAttribute('type', 'submit');
-//   formbutton.setAttribute('class', 'button1');
   formbutton.setAttribute('id', 'comment-button');
   formbutton.innerText = 'Comment';
 
@@ -92,8 +89,6 @@ export const commentDisplay = (myId) => {
 
 
   div.appendChild(popupForm);
-
- const addCmUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VkL66oEPzdyEWHkyAEbV/comments'
 
   const formsd = document.getElementById('form');
   formsd.addEventListener('submit', async (event) => {
@@ -116,15 +111,8 @@ export const commentDisplay = (myId) => {
 
     formsd.username.value = ''
     formsd.insight.value = ''
-
-
-    
-
        loadData(myId)
-
-    
-  });  
-                    
+  });                     
  }
  })
 }

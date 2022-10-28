@@ -54,6 +54,11 @@ img {
   height: 100%;
 }
 
+.likeDiv {
+  display: flex;
+  gap: 10px;
+}
+
 /* comment */
 
 .comment-div {
@@ -123,3 +128,8 @@ background: white;
   background-color: white;
   padding: 10px 15px;
 }
+
+#close-popup {
+  font-size: 30px;
+}
+

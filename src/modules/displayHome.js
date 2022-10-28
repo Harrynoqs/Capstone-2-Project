@@ -51,15 +51,20 @@ likeIcon.setAttribute('class', 'fa-regular fa-heart')
 likeIcon.setAttribute('data-id', `${each.id}`)
 eachCont.appendChild(likeIcon)
 
+const likeDiv = document.createElement('div')
+likeDiv.classList.add('likeDiv')
+eachCont.appendChild(likeDiv)
+
 const para1 = document.createElement('p')
 para1.setAttribute('class', 'like-count')
 para1.setAttribute('id', `${each.id}`)
 para1.innerText = '0'
-eachCont.appendChild(para1)
+likeDiv.appendChild(para1)
 
 const para2 = document.createElement('p')
+para2.setAttribute('class', 'like-text')
 para2.innerText = 'Likes'
-eachCont.appendChild(para2)
+likeDiv.appendChild(para2)
 
 const deleteButton = document.createElement('button')
             deleteButton.classList.add('comment')
@@ -67,13 +72,8 @@ const deleteButton = document.createElement('button')
             deleteButton.setAttribute('id', `btn${each.id}`)
             
             deleteButton.onclick = () => {
-                // const commentDiv = document.getElementById('comment')
-               
-           
             commentDisplay(`${each.id}`)
             }
-
             eachCont.appendChild(deleteButton)
-
 })
 };

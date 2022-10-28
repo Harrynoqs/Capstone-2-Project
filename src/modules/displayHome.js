@@ -1,5 +1,5 @@
 /* eslint-disable */
-
+import { homeItmes } from "./homeItemsCounter.js";
 import { getFromLocalStorage } from "./localStorage.js";
 import { commentDisplay } from "./commentDisplay.js";
 
@@ -11,24 +11,10 @@ export const displayList = () => {
 
   navBar.innerHTML = ''
   const span = document.createElement('span')
-  span.textContent = `Products (${dataArray.length})`
+  span.textContent = `Products (${homeItmes(dataArray)})`
 
   navBar.appendChild(span)
 
-
-//   display.innerHTML = dataArray.map((each) => `
-//         <div class="each-container">
-//             <div class="img-container">
-//                 <img src="${each.image}" alt="${each.category}">
-//             </div>
-//             <p>${each.title}</p>
-//             <i class="fa-regular fa-heart" data-id = '${each.id}'></i>
-//             <p class="like-count" id='${each.id}'>0</p><p>Likes</p>
-
-//             <button id="btn">comment</button>
-//         </div>
-    
-//     `).join('');
 display.innerHTML = ''
 dataArray.forEach((each) => {
     
@@ -51,20 +37,16 @@ likeIcon.setAttribute('class', 'fa-regular fa-heart')
 likeIcon.setAttribute('data-id', `${each.id}`)
 eachCont.appendChild(likeIcon)
 
-const likeDiv = document.createElement('div')
-likeDiv.classList.add('likeDiv')
-eachCont.appendChild(likeDiv)
-
 const para1 = document.createElement('p')
 para1.setAttribute('class', 'like-count')
 para1.setAttribute('id', `${each.id}`)
 para1.innerText = '0'
-likeDiv.appendChild(para1)
+eachCont.appendChild(para1)
 
 const para2 = document.createElement('p')
 para2.setAttribute('class', 'like-text')
 para2.innerText = 'Likes'
-likeDiv.appendChild(para2)
+eachCont.appendChild(para2)
 
 const deleteButton = document.createElement('button')
             deleteButton.classList.add('comment')

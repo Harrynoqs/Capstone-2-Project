@@ -4,14 +4,8 @@ export const close = () => {
     comDiv.innerHTML = ''
 }
 
-export const commentCounter = (array) => {
-    if(array.length){
-        return array.length
-    } else {
-       return "0"
-    }
+export const commentCounter = (array) =>  array.length;
     
-}
 
 export const loadData = async (id) => {
     const fetcs = await fetch(
@@ -39,7 +33,4 @@ export const loadData = async (id) => {
 
         showComment.appendChild(paragraph)
      })
-
-     
-
 };

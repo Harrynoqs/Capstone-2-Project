@@ -1,3 +1,4 @@
+/* eslint-disable */
 import '../index.js';
 
 const endpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VkL66oEPzdyEWHkyAEbV/likes';

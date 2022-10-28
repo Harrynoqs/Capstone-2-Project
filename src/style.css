@@ -42,7 +42,7 @@ footer {
 
 .each-container {
   width: 40%;
-  height: 300px;
+  height: 400px;
 }
 
 .img-container {
@@ -52,4 +52,74 @@ footer {
 img {
   width: 100%;
   height: 100%;
+}
+
+.likeDiv {
+  display: flex;
+  gap: 10px;
+}
+
+/* comment */
+
+.comment-div {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background: white;
+}
+
+.delButton {
+  float: right;
+  margin: 30px 30px 0 0;
+}
+
+.comment-img {
+  width: 70%;
+  height: 300px;
+  margin: 30px auto;
+  clear: both;
+}
+
+.comment-details,
+.showComment,
+.popup_form {
+  width: 70%;
+  margin: auto;
+}
+
+.comment-title,
+.commentHead,
+.add-comment {
+  text-align: center;
+}
+
+#username {
+  width: 60%;
+  height: 25px;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding-left: 10px;
+}
+
+#insight {
+  width: 80%;
+  height: 70px;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding-left: 10px;
+  margin: 20px 0;
+}
+
+#comment-button {
+  background-color: white;
+  padding: 10px 15px;
+}
+
+#close-popup {
+  font-size: 30px;
 }

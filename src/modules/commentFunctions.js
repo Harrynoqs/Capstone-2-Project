@@ -4,12 +4,18 @@ export const close = () => {
     comDiv.innerHTML = ''
 }
 
-export const commentCounter = (array) =>  array.length;
+export const commentCounter = (array) => {
+  if(array.length){
+      return array.length
+  } else {
+     return "0"
+  }   
+}
     
 
 export const loadData = async (id) => {
     const fetcs = await fetch(
-      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VkL66oEPzdyEWHkyAEbV/comments?item_id=${id}`,
+      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S8XMmRCmcLZyPwNwbfEu/comments?item_id=${id}`,
     );
     const dataz = fetcs.json();
      const commentArray =  await dataz.then((data) => {return data});

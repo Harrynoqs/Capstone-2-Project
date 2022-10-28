@@ -97,7 +97,7 @@ export const commentDisplay = (myId) => {
     let name = formsd.username.value
     let comment = formsd.insight.value
 
-    await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VkL66oEPzdyEWHkyAEbV/comments', {
+    await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S8XMmRCmcLZyPwNwbfEu/comments', {
         method: 'POST',
         body: JSON.stringify({
             item_id: myId,

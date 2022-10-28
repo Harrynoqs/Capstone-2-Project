@@ -1,7 +1,7 @@
 /* eslint-disable */
 import '../index.js';
 
-const endpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VkL66oEPzdyEWHkyAEbV/likes';
+const endpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S8XMmRCmcLZyPwNwbfEu/likes';
 
 const showLikes = (response) => {
   response.forEach((data) => {
@@ -13,6 +13,7 @@ const showLikes = (response) => {
     });
   });
 };
+
 
 export const getLikes = async () => {
   await fetch(endpoint)

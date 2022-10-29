@@ -29,7 +29,8 @@ imgCont.innerHTML = `<img src="${each.image}" alt="${each.category}">`
 eachCont.appendChild(imgCont)
 
 const paraTitle = document.createElement('p')
-paraTitle.innerHTML = ` <p>${each.title}</p>`
+paraTitle.classList.add('mens-cloth')
+paraTitle.innerText = `${each.title}`
 eachCont.appendChild(paraTitle)
 
 const likeIcon = document.createElement('i')

@@ -12,12 +12,12 @@ const getData = async () => {
   const dataArray = await fetchData.json();
 
   const shortArray = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 12; i++) {
     shortArray.push(dataArray[i]);
   }
   addToLocalStorage(shortArray);
   displayList();
-  getLikes
+  getLikes()
 };
 
 getData();

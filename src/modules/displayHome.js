@@ -2,6 +2,7 @@
 import { homeItmes } from "./homeItemsCounter.js";
 import { getFromLocalStorage } from "./localStorage.js";
 import { commentDisplay } from "./commentDisplay.js";
+import { commentCounter } from "./commentFunctions.js";
 
 export const displayList = () => {
     const dataArray = getFromLocalStorage();
@@ -11,7 +12,8 @@ export const displayList = () => {
 
   navBar.innerHTML = ''
   const span = document.createElement('span')
-  span.textContent = `Products (${homeItmes(dataArray)})`
+  span.setAttribute('id', 'itemNum')
+
 
   navBar.appendChild(span)
 
@@ -56,6 +58,7 @@ const deleteButton = document.createElement('button')
             
             deleteButton.onclick = () => {
             commentDisplay(`${each.id}`)
+            commentCounter()
             }
             eachCont.appendChild(deleteButton)
 })

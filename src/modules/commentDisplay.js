@@ -45,6 +45,7 @@ export const commentDisplay = (myId) => {
             div.appendChild(commentHoder)
 
             loadData(myId)
+           
 
 
             // comment form
@@ -112,6 +113,7 @@ export const commentDisplay = (myId) => {
     formsd.username.value = ''
     formsd.insight.value = ''
        loadData(myId)
+      //  commentCounter()
   });                     
  }
  })

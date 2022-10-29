@@ -4,12 +4,9 @@ export const close = () => {
     comDiv.innerHTML = ''
 }
 
-export const commentCounter = (array) => {
-  if(array.length){
-      return array.length
-  } else {
-     return "0"
-  }   
+export const commentCounter = (node) => {
+  const nodes = [...node.children];
+   return nodes.length;
 }
     
 
@@ -19,24 +16,32 @@ export const loadData = async (id) => {
     );
     const dataz = fetcs.json();
      const commentArray =  await dataz.then((data) => {return data});
-     const countComment = commentCounter(commentArray)
-     
-
+    
      const showComment = document.querySelector('.showComment')
 
      showComment.innerHTML = ''
 
      const commentHead = document.createElement('h2')
-     commentHead.innerHTML = `<span>Comments (${countComment})</span>`
+      
      commentHead.classList.add('commentHead')
      showComment.appendChild(commentHead)
 
-     commentArray.forEach((each) => {
+     const allcomments = document.createElement('div')
+     allcomments.classList.add('allcomments')
+     showComment.appendChild(allcomments)
 
-        const paragraph = document.createElement('p')
-        paragraph.classList.add('each-comment')
-        paragraph.innerText = `${each.creation_date} ${each.username}: ${each.comment}`
+      if (commentArray.length > 0) {
+        console.log('a')
+        commentArray.forEach((each) => {
 
-        showComment.appendChild(paragraph)
-     })
+          const paragraph = document.createElement('p')
+          paragraph.classList.add('each-comment')
+          paragraph.innerText = `${each.creation_date} ${each.username}: ${each.comment}`
+  
+          allcomments.appendChild(paragraph)
+       }) 
+       commentHead.innerHTML = `<span>Comments (${commentCounter(allcomments)})</span>`
+      } else {
+        commentHead.innerHTML = `<span>Comments (0)</span>`
+      }
 };

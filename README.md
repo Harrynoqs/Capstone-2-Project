@@ -1,75 +1,81 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Product-display
 
-> Description the project.
+Harry&mike  is a website about an online shop, it presents details about different products sold online and gives the user the ability to like or comment on their preferred products. The website is based on an [external API](https://fakestoreapi.com/products/api) that provides all product details.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
+- HTML
+- CSS
+- JavaScript
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://harrynoqs.github.io/Capstone-2-Project/dist/)
 
+## Video description
+
+[Video Link](https://drive.google.com/file/d/1SH8RH9DUcDdVd2n6ThXi1DrnmDohtifQ/view?usp=sharing)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
+  - A web browser _(Chrome, Mozilla, Edge...)_.
+  - A packet manager _(In the following instruction npm will be used, you can choose any packet manager you like)_
+
 ### Setup
 
-### Install
+  To clone and run this project on your local machine please Fork the project files from this repository on your machine then on your bash run the following commands inside the project directory _(The project files are already compiled, if you only wish to visualise the running version of the project you can jump to step 4)_: 
 
-### Usage
+1. Run `npm install` To install webpack and project dependencies _(a packet manager is required)_.
 
-### Run tests
+2. Run `npm run build` To build project files in development mode **OR** `npm run dist` To build project files in production mode _(The destination folder is `/dist`)_.
 
-### Deployment
+3. To open the Webpack liver server run `npm run start`.
+   
+4. To run the project open the `index.html` inside the `/dist` folder.
+
+### Setup
+
+  To clone and run this project on your machine please follow the instructions: 
+
+1. Download the project files as a ZIP file using the `code` button in the github repository interface.
+
+2. Extract the project folder from the ZIP file.
+
+3. Browse to the project folder and open the `index.html` file.
 
 
+👤**Micheal Oguntayo**
 
-## Authors
+- GitHub: [@oguntayomicheal](https://github.com/oguntayomicheal)
+- Twitter: [@OguntayoMicheal](https://twitter.com/Oguns_micky)
+- LinkedIn: [@OguntayoMicheal](https://www.linkedin.com/in/ogunsmicky/)
 
-👤 **Author1**
+👤 **Harry**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Harrynoqs](https://github.com/githubhandle)
+- Twitter: [@noqsnoq1](https://twitter.com/twitterhandle)
+- LinkedIn: (https://www.linkedin.com/in/harrison-njuguna-59536314/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
-
+👤 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse for the design provided
 
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._

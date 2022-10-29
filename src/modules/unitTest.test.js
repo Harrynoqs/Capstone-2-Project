@@ -1,47 +1,38 @@
-/* eslint-disable */
-// import { commentCounter } from "./commentFunctions.js";
-import { homeItmes } from "./homeItemsCounter.js";
-import { commentCounter } from "./commentFunctions.js";
+/**
+ * @jest-environment jsdom
+ */
+import { homeItmes } from './homeItemsCounter.js';
+import { commentCounter } from './commentFunctions.js';
 
 describe('Home items, Comments', () => {
-   
-    test('Count home items', () => {
-      // Arrange
-      let dataArray = [
-        {
-          description: 'Men cloths',
-          id: 1,
-        },
-        {
-          description: 'Bags',
-          id: 2,
-        }
-      ];
-      // Act
-       let itemNumber = homeItmes(dataArray);
-      
-      // Assert
-      expect(itemNumber).toBe(2);
-    });
+  test('count homeItems', () => {
+    document.body.innerHTML = `
+    <div class="allItems">
+      <div class="each-container"></div>
+      <div class="each-container"></div>
+      <div class="each-container"></div>
+      <div class="each-container"></div>
+      <div class="each-container"></div>
+    </div>
+    `;
 
-    test('Comments counter', () => {
-      // Arrange
-      let dataArray = [
-        {
-          comment: 'This is nice!',
-          creation_date: '2021-01-10',
-          username: 'Harry',
-        },
-        {
-          comment: 'This is nice!',
-          creation_date: '2021-28-10',
-          username: 'Mike',
-        }]
-      // Act
-       let commentNumber = commentCounter(dataArray);
-      
-      // Assert
-      expect(commentNumber).toBe(2);
-    });
+    const itemNum = homeItmes();
+
+    expect(itemNum).toBe(5);
   });
-  
+
+  test('count comments', () => {
+    // Arrange
+    const ContainerNode = document.createElement('div');
+    for (let i = 0; i < 10; i += 1) {
+      const CommentNode = document.createElement('p');
+      ContainerNode.appendChild(CommentNode);
+    }
+
+    // Act
+    const commentCount = commentCounter(ContainerNode);
+
+    // Assert
+    expect(commentCount).toBe(10);
+  });
+});

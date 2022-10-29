@@ -62,4 +62,7 @@ const deleteButton = document.createElement('button')
             }
             eachCont.appendChild(deleteButton)
 })
+
+  const itemNum = homeItmes()
+  span.textContent = `Products (${itemNum})`
 };

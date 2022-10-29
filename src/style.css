@@ -19,6 +19,10 @@ html {
   display: flex;
   gap: 55px;
   flex-wrap: wrap;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 30px;
+  align-items: center;
 }
 
 footer {
@@ -127,7 +131,7 @@ img {
 .like-count {
   clear: both;
   float: left;
-  margin: 18px 8px 0 0;
+  margin: 20px 8px 0 0;
 }
 
 .like-text {
@@ -154,4 +158,13 @@ img {
 
 button:hover {
   background-color: aliceblue;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
 }
